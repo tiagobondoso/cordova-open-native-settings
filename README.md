@@ -165,11 +165,14 @@ Setting constant | Description
 "wallpaper" | Settings > Wallpaper
 "wifi" | Settings > WIFI
 
-## Notes
-* Android plugin based on the following information: https://developer.android.com/reference/android/provider/Settings.html#ACTION_DREAM_SETTINGS
-* iOS plugin based on the following information: https://gist.github.com/phynet/471089a51b8f940f0fb4
-* In iOS, this plugin generates a URL scheme for the *-Info.plist configurations file.
-* The plugin for Android is based on the forked repository and was refactored. The iOS part was built from skretch.
+
+##Notes
+*Android plugin based on: https://developer.android.com/reference/android/provider/Settings.html#ACTION_DREAM_SETTINGS
+*iOS plugin now uses UIApplicationOpenSettingsURLString and openURL:options:completionHandler: (safe for iOS 10+)
+*Full support for opening app settings ("application_details") in line with App Store guidelines
+*Legacy iOS schemes like "prefs:" or "App-Prefs:" have been removed for compliance
+*The plugin for Android is based on a forked repository and was refactored. The iOS part was built from scratch and later modernized.
+*If you're only targeting app settings in iOS, you can use window.open('app-settings:', '_system') directly.
 
 ## License
 ```
