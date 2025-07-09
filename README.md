@@ -1,6 +1,15 @@
-# NativeSettings plugin for Cordova (6/7)
+## Using the plugin (opens Location Settings in Android and Application Settings in iOS)
 
-The plugin allows you to open OS settings on iOS 8/9/10 and Android, via cordova-based app. For example, it will allow you to open the keyboard settings, Wifi, bluetooth etc (full list below).
+This plugin supports both Android and iOS. The `"application_details"` constant opens the settings page of the application on both platforms.
+
+### ✅ iOS Notice (Updated)
+
+The iOS implementation now uses the recommended `UIApplicationOpenSettingsURLString` with `openURL:options:completionHandler:` for full compatibility with iOS 10+. This ensures proper redirection to your app’s settings page using the safest and most future-proof approach.
+
+If your only goal is to open the **application settings on iOS**, and you're not using Cordova or a plugin, you may also use this direct JavaScript fallback:
+
+```javascript
+window.open('app-settings:', '_system');
 
 ## Adding/Removing the Plugin
 It will be saved to the config.xml file
