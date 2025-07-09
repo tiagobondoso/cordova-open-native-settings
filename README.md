@@ -166,13 +166,13 @@ Setting constant | Description
 "wifi" | Settings > WIFI
 
 
-##Notes
-*Android plugin based on: https://developer.android.com/reference/android/provider/Settings.html#ACTION_DREAM_SETTINGS
-*iOS plugin now uses UIApplicationOpenSettingsURLString and openURL:options:completionHandler: (safe for iOS 10+)
-*Full support for opening app settings ("application_details") in line with App Store guidelines
-*Legacy iOS schemes like "prefs:" or "App-Prefs:" have been removed for compliance
-*The plugin for Android is based on a forked repository and was refactored. The iOS part was built from scratch and later modernized.
-*If you're only targeting app settings in iOS, you can use window.open('app-settings:', '_system') directly.
+## Notes
+* Android plugin based on: https://developer.android.com/reference/android/provider/Settings.html#ACTION_DREAM_SETTINGS
+* iOS plugin now uses UIApplicationOpenSettingsURLString and openURL:options:completionHandler: (safe for iOS 10+)
+* Full support for opening app settings ("application_details") in line with App Store guidelines
+* Legacy iOS schemes like "prefs:" or "App-Prefs:" have been removed for compliance
+* The plugin for Android is based on a forked repository and was refactored. The iOS part was built from scratch and later modernized.
+* If you're only targeting app settings in iOS, you can use window.open('app-settings:', '_system') directly.
 
 ## License
 ```
